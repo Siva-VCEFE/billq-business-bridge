@@ -2,69 +2,69 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Globe, WifiOff } from 'lucide-react';
+import { Check, Globe, WifiOff, AlertCircle } from 'lucide-react';
 
 const EditionsSection = () => {
   const [selectedMode, setSelectedMode] = useState('online');
 
   const editions = [
     {
-      name: "Starter Pack",
+      name: "Professional Starter",
       onlinePrice: "₹6,000",
       offlinePrice: "₹5,000",
-      description: "Perfect for small retail shops and service providers",
+      description: "Perfect for growing small businesses and service providers",
       features: [
-        "Basic GST Billing & Invoicing",
+        "Multi-Channel Order Management",
+        "Lead to Invoice Conversion",
         "Customer Management (up to 500)",
-        "Basic Inventory Tracking",
-        "Payment Tracking",
-        "Basic Reports & Analytics",
+        "Basic Kanban Board View",
+        "Payment Tracking & Reports",
         "Single User Access",
         "Email Support",
-        "Multi-state GST Compliance"
+        "GST Compliance & Documentation"
       ],
       popular: false,
-      renewal: { online: "30%", offline: "20%" }
+      renewal: { online: "30% (Required)", offline: "20% (Optional)" }
     },
     {
-      name: "Business Pack",
+      name: "Business Pro",
       onlinePrice: "₹15,000",
       offlinePrice: "₹12,500",
-      description: "Ideal for growing businesses and distributors",
+      description: "Ideal for established businesses with advanced workflow needs",
       features: [
-        "Everything in Starter Pack",
-        "Advanced Inventory Management",
+        "Everything in Professional Starter",
+        "Advanced Order Management & Kanban",
         "Multi-user Access (up to 5 users)",
         "WhatsApp Business Integration",
-        "Expense & Purchase Management",
-        "Supplier Account Management",
-        "Advanced Reports & Analytics",
-        "Barcode Scanning Support",
+        "Advanced CRM & Lead Management",
+        "Supplier & Purchase Management",
+        "Business Intelligence Reports",
+        "Barcode & QR Code Support",
         "Customer Credit Management",
-        "Priority Email Support"
+        "Priority Email & Chat Support"
       ],
       popular: true,
-      renewal: { online: "30%", offline: "20%" }
+      renewal: { online: "30% (Required)", offline: "20% (Optional)" }
     },
     {
-      name: "Enterprise CRM",
+      name: "Enterprise Suite",
       onlinePrice: "₹18,000",
       offlinePrice: "₹16,500",
-      description: "Complete solution for large operations and field teams",
+      description: "Complete solution for large operations with field teams",
       features: [
-        "Everything in Business Pack",
+        "Everything in Business Pro",
         "Unlimited Users & Locations",
-        "Field Sales Team Management",
-        "GPS Tracking & Route Planning",
-        "Advanced CRM Features",
-        "API Access & Integrations",
+        "Advanced Field Team Management",
+        "GPS Tracking & Territory Management",
+        "Enterprise CRM with Analytics",
+        "API Access & Custom Integrations",
         "Custom Report Builder",
         "Dedicated Account Manager",
         "Phone & WhatsApp Support",
-        "On-site Training Available"
+        "On-site Training & Setup"
       ],
       popular: false,
-      renewal: { online: "30%", offline: "20%" }
+      renewal: { online: "30% (Required)", offline: "20% (Optional)" }
     }
   ];
 
@@ -73,10 +73,10 @@ const EditionsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            One-Time Setup Charges - Choose Your Business Software Edition
+            Premium Business Platform - Choose Your Edition
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Affordable one-time payment plans for Indian businesses. No monthly fees, lifetime software access with yearly renewal for updates and support.
+            Invest in your business growth with our premium platform. One-time setup with flexible renewal options designed for Indian businesses.
           </p>
           
           <div className="flex justify-center mb-8">
@@ -105,6 +105,13 @@ const EditionsSection = () => {
               </button>
             </div>
           </div>
+          
+          {selectedMode === 'online' && (
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8 flex items-center justify-center gap-2">
+              <AlertCircle className="h-5 w-5 text-amber-600" />
+              <span className="text-amber-800 font-medium">Online Edition requires yearly renewal for continued access</span>
+            </div>
+          )}
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
@@ -127,7 +134,7 @@ const EditionsSection = () => {
                 </div>
                 <p className="text-gray-600">{edition.description}</p>
                 <div className="text-sm text-blue-600 font-medium">
-                  Yearly Renewal: {selectedMode === 'online' ? edition.renewal.online : edition.renewal.offline}% of product value
+                  Yearly Renewal: {selectedMode === 'online' ? edition.renewal.online : edition.renewal.offline}
                 </div>
               </CardHeader>
               <CardContent>
@@ -149,7 +156,7 @@ const EditionsSection = () => {
                   Choose {edition.name}
                 </Button>
                 <p className="text-xs text-gray-500 text-center mt-3">
-                  ✓ No monthly fees ✓ Lifetime access ✓ Free installation support
+                  ✓ Premium platform access ✓ Professional setup ✓ Expert installation support
                 </p>
               </CardContent>
             </Card>
@@ -157,19 +164,19 @@ const EditionsSection = () => {
         </div>
         
         <div className="mt-12 bg-blue-50 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose One-Time Payment?</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Premium Platform?</h3>
           <div className="grid md:grid-cols-3 gap-6 text-left">
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">No Monthly Subscription</h4>
-              <p className="text-gray-600 text-sm">Pay once and use forever. No recurring monthly or yearly subscription fees.</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Enterprise-Grade Solution</h4>
+              <p className="text-gray-600 text-sm">Professional platform built for serious businesses ready to scale and optimize operations.</p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Lifetime Software Access</h4>
-              <p className="text-gray-600 text-sm">Continue using the software even if you skip renewal. Only updates require renewal.</p>
+              <h4 className="font-semibold text-gray-900 mb-2">Flexible Ownership Model</h4>
+              <p className="text-gray-600 text-sm">One-time investment with flexible renewal options. Offline edition works even without renewal.</p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Cost-Effective for SMEs</h4>
-              <p className="text-gray-600 text-sm">Perfect for Indian small businesses who want to avoid monthly payment burden.</p>
+              <h4 className="font-semibold text-gray-900 mb-2">ROI-Focused Design</h4>
+              <p className="text-gray-600 text-sm">Every feature designed to increase efficiency, reduce costs, and drive business growth.</p>
             </div>
           </div>
         </div>

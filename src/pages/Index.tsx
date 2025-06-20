@@ -11,6 +11,8 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import FAQSection from '../components/FAQSection';
 import FinalCTASection from '../components/FinalCTASection';
 import WhatsAppWidget from '../components/support/WhatsAppWidget';
+import AboutSection from '../components/AboutSection';
+import SupportSection from '../components/SupportSection';
 
 const Index = () => {
   return (
@@ -18,12 +20,22 @@ const Index = () => {
       <Header />
       <HeroSection />
       <PainPointsSection />
-      <FeaturesSection />
-      <EditionsSection />
+      <div id="features">
+        <FeaturesSection />
+      </div>
+      <div id="pricing">
+        <EditionsSection />
+      </div>
       <HowItWorksSection />
       <TargetAudienceSection />
       <TestimonialsSection />
       <FAQSection />
+      <div id="support">
+        <SupportSection />
+      </div>
+      <div id="about">
+        <AboutSection />
+      </div>
       <FinalCTASection />
       <WhatsAppWidget />
     </div>

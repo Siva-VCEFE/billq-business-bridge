@@ -14,7 +14,10 @@ import {
   MapPin,
   Calculator,
   Globe,
-  ChevronRight
+  ChevronRight,
+  Kanban,
+  ShoppingCart,
+  Zap
 } from 'lucide-react';
 
 const FeaturesSection = () => {
@@ -22,60 +25,60 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      icon: <FileText className="h-8 w-8 text-blue-600" />,
-      title: "GST Invoice Software",
-      description: "Generate GST-compliant invoices for all states including CGST, SGST, IGST",
-      details: "Complete GST billing solution with automatic tax calculations, HSN codes, and compliance for inter-state and intra-state transactions. Supports all Indian states including Karnataka, Tamil Nadu, Maharashtra, and more.",
-      benefits: ["Multi-state GST compliance", "Automatic tax calculations", "HSN code management", "E-invoice ready"]
+      icon: <Kanban className="h-8 w-8 text-blue-600" />,
+      title: "Multi-Channel Order Management",
+      description: "Unified order processing with Kanban board visualization across all channels",
+      details: "Advanced order management system with Kanban board view for visual workflow management. Handle orders from multiple channels including online stores, marketplaces, and direct sales in one unified dashboard.",
+      benefits: ["Kanban board workflow", "Multi-channel integration", "Order status tracking", "Automated notifications"]
     },
     {
-      icon: <Package className="h-8 w-8 text-green-600" />,
-      title: "Inventory Management System",
-      description: "Real-time stock tracking with low stock alerts and batch management",
-      details: "Advanced inventory control with barcode scanning, batch tracking, expiry date management, and automatic reorder points. Perfect for retail shops and distributors.",
-      benefits: ["Barcode scanning", "Batch tracking", "Expiry management", "Auto reorder alerts"]
+      icon: <Zap className="h-8 w-8 text-green-600" />,
+      title: "Lead to Invoice Conversion",
+      description: "Convert leads and orders to professional invoices with a single click",
+      details: "Streamline your sales process with intelligent lead management. Convert prospects to customers and generate invoices instantly with pre-filled customer data and order details.",
+      benefits: ["One-click conversion", "Lead tracking", "Auto-populated invoices", "Sales pipeline management"]
     },
     {
       icon: <Users className="h-8 w-8 text-purple-600" />,
-      title: "Customer & Supplier CRM",
-      description: "Complete customer relationship management with payment tracking",
-      details: "Manage customer data, track payment history, send payment reminders, and maintain detailed supplier records with purchase history and outstanding amounts.",
-      benefits: ["Payment tracking", "Credit management", "Customer history", "Automated reminders"]
+      title: "Advanced CRM System",
+      description: "Complete customer relationship management with intelligent insights",
+      details: "Enterprise-grade CRM with customer journey tracking, interaction history, payment behavior analysis, and automated follow-up sequences for maximum customer retention.",
+      benefits: ["Customer journey mapping", "Interaction history", "Automated follow-ups", "Behavior analytics"]
     },
     {
-      icon: <Smartphone className="h-8 w-8 text-indigo-600" />,
-      title: "WhatsApp Business Integration",
-      description: "Send invoices and payment reminders directly via WhatsApp",
-      details: "Automated WhatsApp messaging for invoice sharing, payment reminders, order confirmations, and customer follow-ups. Boost your customer engagement effortlessly.",
-      benefits: ["Invoice sharing", "Payment reminders", "Order updates", "Customer engagement"]
+      icon: <FileText className="h-8 w-8 text-indigo-600" />,
+      title: "Smart Document Generation",
+      description: "Professional invoices, quotations, and reports with GST compliance",
+      details: "Generate professional business documents with intelligent templates, automatic tax calculations, and compliance management for seamless business operations.",
+      benefits: ["Professional templates", "GST compliance", "Automated calculations", "Brand customization"]
     },
     {
-      icon: <MapPin className="h-8 w-8 text-red-600" />,
-      title: "Field Sales Management",
-      description: "Track field team performance and manage remote orders",
-      details: "Complete field sales solution with GPS tracking, order collection, expense management, and real-time reporting for field executives and sales teams.",
-      benefits: ["GPS tracking", "Remote order entry", "Expense tracking", "Performance reports"]
+      icon: <Package className="h-8 w-8 text-orange-600" />,
+      title: "Intelligent Inventory Control",
+      description: "Real-time inventory tracking with predictive analytics and automation",
+      details: "Advanced inventory management with AI-powered demand forecasting, automatic reorder points, and multi-location tracking for optimized stock management.",
+      benefits: ["Predictive analytics", "Multi-location tracking", "Auto reorder alerts", "Demand forecasting"]
     },
     {
-      icon: <BarChart3 className="h-8 w-8 text-orange-600" />,
-      title: "Business Analytics & Reports",
-      description: "Detailed profit analysis and business insights dashboard",
-      details: "Comprehensive reporting including sales analysis, profit margins, tax reports, customer analysis, and inventory reports. Make data-driven business decisions.",
-      benefits: ["Profit analysis", "Sales reports", "Tax summaries", "Customer insights"]
+      icon: <Smartphone className="h-8 w-8 text-red-600" />,
+      title: "Omnichannel Communication",
+      description: "WhatsApp Business, SMS, and email automation for customer engagement",
+      details: "Integrated communication platform with automated messaging, customer notifications, and multi-channel support for enhanced customer experience.",
+      benefits: ["WhatsApp automation", "Multi-channel messaging", "Customer notifications", "Engagement tracking"]
     },
     {
-      icon: <Wifi className="h-8 w-8 text-gray-600" />,
-      title: "Offline Billing Software",
-      description: "Work without internet - sync when connected",
-      details: "Complete offline functionality for billing, inventory, and customer management. Automatically syncs data when internet is available. Perfect for areas with poor connectivity.",
-      benefits: ["No internet required", "Auto sync", "Reliable operation", "Remote area friendly"]
+      icon: <MapPin className="h-8 w-8 text-teal-600" />,
+      title: "Field Team Excellence",
+      description: "Complete field sales management with GPS tracking and performance analytics",
+      details: "Comprehensive field team management with real-time tracking, territory management, visit scheduling, and performance analytics for maximum field productivity.",
+      benefits: ["GPS tracking", "Territory management", "Visit scheduling", "Performance metrics"]
     },
     {
-      icon: <Calculator className="h-8 w-8 text-teal-600" />,
-      title: "Multi-State Tax Compliance",
-      description: "Supports GST for all Indian states and union territories",
-      details: "Comprehensive tax management for all Indian states including special provisions for Jammu & Kashmir, North-East states, and union territories with different tax structures.",
-      benefits: ["All state compliance", "Union territory support", "Special state provisions", "Regular updates"]
+      icon: <BarChart3 className="h-8 w-8 text-violet-600" />,
+      title: "Business Intelligence Suite",
+      description: "Advanced analytics and reporting for data-driven decision making",
+      details: "Comprehensive business intelligence with custom dashboards, predictive analytics, profit optimization insights, and executive reporting for strategic decision making.",
+      benefits: ["Custom dashboards", "Predictive analytics", "Profit optimization", "Executive reports"]
     }
   ];
 
@@ -84,10 +87,10 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Complete Business Management Software Features
+            Premium Business Management Platform Features
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            All-in-one billing and inventory software designed for Indian businesses with GST compliance, offline access, and powerful automation features
+            Enterprise-grade solution designed for ambitious businesses. Advanced order management, CRM automation, and intelligent workflows that scale with your growth.
           </p>
         </div>
         
@@ -143,7 +146,7 @@ const FeaturesSection = () => {
                 </div>
                 
                 <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  Get Started with This Feature
+                  Explore This Feature
                 </Button>
               </CardContent>
             </Card>
