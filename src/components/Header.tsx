@@ -1,13 +1,11 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { User, LogIn, UserPlus } from 'lucide-react';
-import LoginModal from './auth/LoginModal';
-import SignupModal from './auth/SignupModal';
+import { Phone, Mail } from 'lucide-react';
+import ContactModal from './contact/ContactModal';
 
 const Header = () => {
-  const [showLogin, setShowLogin] = useState(false);
-  const [showSignup, setShowSignup] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   return (
     <>
@@ -15,53 +13,40 @@ const Header = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-blue-600">BillQ</h1>
+              <h1 className="text-2xl font-bold text-[#0bc073]">BillQ</h1>
             </div>
             
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
-              <a href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">Pricing</a>
-              <a href="#support" className="text-gray-600 hover:text-blue-600 transition-colors">Support</a>
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+              <a href="#features" className="text-gray-600 hover:text-[#0bc073] transition-colors">Features</a>
+              <a href="#pricing" className="text-gray-600 hover:text-[#0bc073] transition-colors">Pricing</a>
+              <a href="#support" className="text-gray-600 hover:text-[#0bc073] transition-colors">Support</a>
+              <a href="#about" className="text-gray-600 hover:text-[#0bc073] transition-colors">About</a>
             </nav>
 
             <div className="flex items-center space-x-4">
               <Button 
                 variant="outline" 
-                onClick={() => setShowLogin(true)}
-                className="flex items-center gap-2"
+                onClick={() => window.open('tel:+918220490340')}
+                className="hidden sm:flex items-center gap-2 border-[#0bc073] text-[#0bc073] hover:bg-[#0bc073] hover:text-white"
               >
-                <LogIn className="h-4 w-4" />
-                Sign In
+                <Phone className="h-4 w-4" />
+                Call Now
               </Button>
               <Button 
-                onClick={() => setShowSignup(true)}
-                className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+                onClick={() => setShowContact(true)}
+                className="bg-[#0bc073] hover:bg-[#089a5f] flex items-center gap-2"
               >
-                <UserPlus className="h-4 w-4" />
-                Start Free Trial
+                <Mail className="h-4 w-4" />
+                Get Demo
               </Button>
             </div>
           </div>
         </div>
       </header>
 
-      <LoginModal 
-        isOpen={showLogin} 
-        onClose={() => setShowLogin(false)}
-        onSwitchToSignup={() => {
-          setShowLogin(false);
-          setShowSignup(true);
-        }}
-      />
-      
-      <SignupModal 
-        isOpen={showSignup} 
-        onClose={() => setShowSignup(false)}
-        onSwitchToLogin={() => {
-          setShowSignup(false);
-          setShowLogin(true);
-        }}
+      <ContactModal 
+        isOpen={showContact} 
+        onClose={() => setShowContact(false)}
       />
     </>
   );

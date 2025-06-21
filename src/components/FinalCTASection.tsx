@@ -16,9 +16,36 @@ const FinalCTASection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent('Demo Request - BillQ Smart Order Management');
+    const body = encodeURIComponent(`
+Demo Request Details:
+
+Name: ${formData.name}
+Mobile: ${formData.mobile}
+Business Type: ${formData.businessType}
+Preferred Usage: ${formData.preferredUsage}
+
+Please contact me for a demo of BillQ Smart Order Management System.
+    `);
+    
+    const mailtoLink = `mailto:support@billq.co.in?subject=${subject}&body=${body}`;
+    window.open(mailtoLink);
+    
+    // Also open WhatsApp with the same details
+    const whatsappMessage = encodeURIComponent(`Hi, I'm interested in BillQ demo.
+Name: ${formData.name}
+Mobile: ${formData.mobile}
+Business: ${formData.businessType}
+Preferred: ${formData.preferredUsage}`);
+    
+    setTimeout(() => {
+      window.open(`https://wa.me/918220760340?text=${whatsappMessage}`, '_blank');
+    }, 1000);
+    
     setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -26,27 +53,27 @@ const FinalCTASection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+    <section className="py-20 bg-gradient-to-br from-[#0bc073] to-emerald-700 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Start Your Digital Business Transformation Today
           </h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-            Join 10,000+ Indian businesses using BillQ for GST billing, inventory management, and business growth
+            Join 50+ Indian businesses using BillQ for smart order management, multi-channel processing, and business growth
           </p>
           
           <div className="flex justify-center items-center gap-8 mb-8">
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              <span className="text-sm">10,000+ Active Users</span>
+              <span className="text-sm">50+ Growing Businesses</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="h-5 w-5 text-yellow-400" />
-              <span className="text-sm">4.8/5 Rating</span>
+              <span className="text-sm">4.9/5 Rating</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-400" />
+              <CheckCircle className="h-5 w-5 text-green-300" />
               <span className="text-sm">99.9% Uptime</span>
             </div>
           </div>
@@ -57,31 +84,36 @@ const FinalCTASection = () => {
             <h3 className="text-2xl font-bold mb-6">Ready to Streamline Your Business?</h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span>Free installation and setup support</span>
+                <CheckCircle className="h-5 w-5 text-green-300" />
+                <span>Free consultation and setup support</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span>7-day money-back guarantee</span>
+                <CheckCircle className="h-5 w-5 text-green-300" />
+                <span>Customizable to your workflow</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span>No monthly fees - one-time payment</span>
+                <CheckCircle className="h-5 w-5 text-green-300" />
+                <span>Multi-channel order management</span>
               </div>
               <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span>Works offline - no internet dependency</span>
+                <CheckCircle className="h-5 w-5 text-green-300" />
+                <span>One-click lead to invoice conversion</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+              <Button size="lg" className="bg-white text-[#0bc073] hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
                 View All Pricing Plans
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-white text-white hover:bg-white hover:text-[#0bc073] px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
+                onClick={() => window.open('tel:+918220490340')}
+              >
                 <Phone className="mr-2 h-5 w-5" />
-                Call: +91-9876543210
+                Call: +91 82204 90340
               </Button>
             </div>
           </div>
@@ -96,9 +128,10 @@ const FinalCTASection = () => {
             
             {isSubmitted ? (
               <div className="text-center py-12">
-                <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
+                <CheckCircle className="h-16 w-16 text-green-300 mx-auto mb-4" />
                 <h4 className="text-xl font-bold mb-2">Thank You!</h4>
-                <p className="opacity-90">Our team will contact you within 2 hours</p>
+                <p className="opacity-90 mb-4">Your demo request has been sent successfully.</p>
+                <p className="text-sm opacity-75">Our team will contact you within 2 hours via email and WhatsApp</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -129,6 +162,7 @@ const FinalCTASection = () => {
                     <SelectItem value="service">Service Provider</SelectItem>
                     <SelectItem value="restaurant">Restaurant / Cafe</SelectItem>
                     <SelectItem value="medical">Medical / Clinic</SelectItem>
+                    <SelectItem value="ecommerce">E-commerce Business</SelectItem>
                     <SelectItem value="other">Other Business</SelectItem>
                   </SelectContent>
                 </Select>
@@ -144,13 +178,13 @@ const FinalCTASection = () => {
                 </Select>
                 <Button 
                   type="submit"
-                  className="w-full bg-white text-blue-600 hover:bg-gray-100 py-3 font-semibold transition-all duration-200 hover:scale-105"
+                  className="w-full bg-white text-[#0bc073] hover:bg-gray-100 py-3 font-semibold transition-all duration-200 hover:scale-105"
                   disabled={!formData.name || !formData.mobile || !formData.businessType || !formData.preferredUsage}
                 >
                   Get Free Demo & Pricing
                 </Button>
                 <p className="text-xs text-center opacity-75">
-                  By submitting, you agree to receive business communication from BillQ team
+                  By submitting, you agree to receive business communication from BillQ team via email and WhatsApp
                 </p>
               </form>
             )}
@@ -160,19 +194,19 @@ const FinalCTASection = () => {
         <div className="mt-16 text-center">
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-white/10 rounded-lg p-4">
-              <div className="text-2xl font-bold">10,000+</div>
-              <div className="text-sm opacity-90">Happy Customers</div>
+              <div className="text-2xl font-bold">50+</div>
+              <div className="text-sm opacity-90">Growing Customers</div>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
-              <div className="text-2xl font-bold">50M+</div>
-              <div className="text-sm opacity-90">Invoices Generated</div>
+              <div className="text-2xl font-bold">5K+</div>
+              <div className="text-sm opacity-90">Orders Processed</div>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
-              <div className="text-2xl font-bold">28</div>
-              <div className="text-sm opacity-90">States Covered</div>
+              <div className="text-2xl font-bold">15+</div>
+              <div className="text-sm opacity-90">Business Types</div>
             </div>
             <div className="bg-white/10 rounded-lg p-4">
-              <div className="text-2xl font-bold">99.9%</div>
+              <div className="text-2xl font-bold">99%</div>
               <div className="text-sm opacity-90">Customer Satisfaction</div>
             </div>
           </div>

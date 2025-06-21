@@ -14,7 +14,7 @@ const HeroSection = () => {
     {
       title: "Multi-Channel Order Management",
       description: "Kanban board view for visual workflow management",
-      bgColor: "from-blue-600 to-indigo-600",
+      bgColor: "from-[#0bc073] to-emerald-600",
       icon: "📋"
     },
     {
@@ -26,25 +26,25 @@ const HeroSection = () => {
     {
       title: "Intelligent CRM System",
       description: "AI-powered customer relationship management",
-      bgColor: "from-purple-600 to-violet-600",
+      bgColor: "from-teal-600 to-green-600",
       icon: "🎯"
     },
     {
       title: "Smart Business Analytics",
       description: "Data-driven insights for growth decisions",
-      bgColor: "from-orange-600 to-red-600",
+      bgColor: "from-emerald-600 to-teal-600",
       icon: "📊"
     }
   ];
 
   const businessStats = [
-    { number: "500+", label: "Businesses Trust Us", icon: <Users className="h-5 w-5" /> },
+    { number: "50+", label: "Growing Businesses", icon: <Users className="h-5 w-5" /> },
     { number: "90%", label: "Time Saved on Orders", icon: <Zap className="h-5 w-5" /> },
     { number: "40%", label: "Revenue Growth", icon: <TrendingUp className="h-5 w-5" /> }
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 lg:py-32">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       
@@ -52,24 +52,24 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             {/* Trust Badge */}
-            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-              Trusted by 500+ Growing Businesses
+            <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-[#0bc073] rounded-full mr-2 animate-pulse"></span>
+              Trusted by 50+ Growing Businesses
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Transform Your Business with 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> Smart Order Management</span>
+              Smart Order Management
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0bc073] to-emerald-600"> Beyond Traditional Billing</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Revolutionary business management platform that combines <strong>multi-channel order processing</strong>, <strong>Kanban workflow visualization</strong>, and <strong>one-click invoice generation</strong>. Turn leads into revenue 90% faster with intelligent automation.
+              Revolutionary business management platform that combines <strong>multi-channel order processing</strong>, <strong>Kanban workflow visualization</strong>, and <strong>one-click lead-to-invoice conversion</strong>. Fully customizable to match your unique business workflow - because every business is different.
             </p>
 
             {/* Key Benefits */}
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-blue-100">
-                <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-green-100">
+                <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                   📋
                 </div>
                 <span className="text-gray-700 font-medium">Visual Kanban Order Management</span>
@@ -80,26 +80,26 @@ const HeroSection = () => {
                 </div>
                 <span className="text-gray-700 font-medium">One-Click Lead to Invoice</span>
               </div>
-              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-purple-100">
-                <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-green-100">
+                <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                   🎯
                 </div>
                 <span className="text-gray-700 font-medium">Multi-Channel Integration</span>
               </div>
-              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-orange-100">
-                <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
-                  📊
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-green-100">
+                <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                  🔧
                 </div>
-                <span className="text-gray-700 font-medium">AI-Powered Business Insights</span>
+                <span className="text-gray-700 font-medium">Custom Workflow Design</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg">
-                Start Free Trial Today
+              <Button size="lg" className="bg-gradient-to-r from-[#0bc073] to-emerald-600 hover:from-[#089a5f] hover:to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg">
+                Get Free Demo Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-blue-300 text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105">
+              <Button variant="outline" size="lg" className="border-2 border-[#0bc073] text-[#0bc073] hover:bg-green-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:scale-105">
                 <Play className="mr-2 h-5 w-5" />
                 Watch Success Stories
               </Button>
@@ -110,7 +110,7 @@ const HeroSection = () => {
               {businessStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center mb-2">
-                    <div className="text-blue-600 mr-2">{stat.icon}</div>
+                    <div className="text-[#0bc073] mr-2">{stat.icon}</div>
                     <div className="text-2xl font-bold text-gray-900">{stat.number}</div>
                   </div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
@@ -149,9 +149,9 @@ const HeroSection = () => {
                       </div>
                       <div className="mt-6 flex justify-between items-center">
                         <div className="flex space-x-2">
-                          <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                          <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-[#0bc073] rounded-full"></div>
+                          <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                          <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
                         </div>
                         <div className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
                           Live Preview
@@ -164,8 +164,8 @@ const HeroSection = () => {
             </Carousel>
 
             {/* Floating Elements */}
-            <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full opacity-20 animate-bounce"></div>
-            <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute -top-6 -right-6 w-20 h-20 bg-gradient-to-br from-[#0bc073] to-emerald-500 rounded-full opacity-20 animate-bounce"></div>
+            <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full opacity-20 animate-pulse"></div>
           </div>
         </div>
 
@@ -183,7 +183,7 @@ const HeroSection = () => {
               <span className="text-gray-700 font-semibold">Services</span>
             </div>
             <div className="bg-white/80 backdrop-blur-sm px-6 py-3 rounded-lg border border-gray-200">
-              <span className="text-gray-700 font-semibold">Wholesale</span>
+              <span className="text-gray-700 font-semibold">E-commerce</span>
             </div>
           </div>
         </div>
