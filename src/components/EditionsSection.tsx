@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Globe, WifiOff, AlertCircle } from 'lucide-react';
+import { Check, Globe, WifiOff, AlertCircle, CheckCircle, X, Zap, Settings, Shield, Users } from 'lucide-react';
 
 const EditionsSection = () => {
   const editions = [
