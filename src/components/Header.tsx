@@ -13,7 +13,11 @@ const Header = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-[#0bc073]">BillQ</h1>
+              <img 
+                src="/lovable-uploads/1c0997be-885b-4b84-9f10-02bd9aa45f22.png" 
+                alt="BillQ - Smart Order Management System" 
+                className="h-10 w-auto"
+              />
             </div>
             
             <nav className="hidden md:flex items-center space-x-8">

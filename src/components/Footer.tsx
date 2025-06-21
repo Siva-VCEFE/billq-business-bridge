@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,7 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-[#0bc073] mb-4">BillQ</h3>
+            <img 
+              src="/lovable-uploads/1c0997be-885b-4b84-9f10-02bd9aa45f22.png" 
+              alt="BillQ" 
+              className="h-8 w-auto mb-4 brightness-0 invert"
+            />
             <p className="text-gray-300 mb-4">
               Smart Order Management System designed to streamline your business operations with unlimited scalability.
             </p>
