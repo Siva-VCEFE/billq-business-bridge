@@ -10,11 +10,17 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <img 
-              src="/lovable-uploads/1c0997be-885b-4b84-9f10-02bd9aa45f22.png" 
-              alt="BillQ" 
-              className="h-10 w-auto mb-4 brightness-0 invert filter drop-shadow-sm"
-            />
+            <a 
+              href="#" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-block mb-4"
+            >
+              <img 
+                src="/lovable-uploads/1c0997be-885b-4b84-9f10-02bd9aa45f22.png" 
+                alt="BillQ" 
+                className="h-12 w-auto sm:h-14 brightness-0 invert filter drop-shadow-lg"
+              />
+            </a>
             <p className="text-gray-300 mb-4">
               Smart Order Management System designed to streamline your business operations with unlimited scalability.
             </p>
@@ -91,8 +97,9 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 BillQ. All rights reserved. Made with ❤️ for Indian businesses.
+            <p className="text-gray-400 text-sm text-center md:text-left">
+              © {new Date().getFullYear()} BillQ. All rights reserved. Made with ❤️ for Indian businesses.<br />
+              <span className="text-xs">Powered by VCEFE Tech Company</span>
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-[#0bc073] text-sm">Privacy Policy</a>

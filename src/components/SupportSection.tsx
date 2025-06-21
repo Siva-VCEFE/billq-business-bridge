@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Phone, Mail, MessageCircle, Clock, Users, Award, Globe } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Clock, Users, Award, Headphones } from 'lucide-react';
 import FeedbackSection from './support/FeedbackSection';
 
 const SupportSection = () => {
@@ -50,9 +50,9 @@ const SupportSection = () => {
       label: "Customer Satisfaction"
     },
     {
-      icon: <Globe className="h-8 w-8 text-[#0bc073]" />,
-      value: "Pan India",
-      label: "Service Coverage"
+      icon: <Headphones className="h-8 w-8 text-[#0bc073]" />,
+      value: "Mon-Sat",
+      label: "9 AM - 7 PM Support"
     }
   ];
 

@@ -95,3 +95,84 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile-first responsive design enhancements */
+@layer utilities {
+  .container {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Ensure proper text scaling on mobile */
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  /* Mobile-friendly card padding */
+  .card-mobile {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+  
+  /* Mobile-friendly button sizing */
+  .btn-mobile {
+    @apply px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base;
+  }
+  
+  /* Ensure images are responsive */
+  .img-responsive {
+    @apply w-full h-auto max-w-full;
+  }
+  
+  /* Mobile-friendly grid layouts */
+  .grid-mobile {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 640px) {
+  .pricing-card {
+    @apply transform-none hover:transform-none;
+  }
+  
+  .mobile-scroll {
+    @apply overflow-x-auto;
+  }
+  
+  .mobile-text {
+    @apply text-base leading-relaxed;
+  }
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-2 border-gray-800;
+  }
+  
+  .text-gray-600 {
+    @apply text-gray-800;
+  }
+  
+  .text-gray-500 {
+    @apply text-gray-700;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

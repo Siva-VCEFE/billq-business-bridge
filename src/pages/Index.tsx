@@ -7,6 +7,7 @@ import FeaturesSection from '../components/FeaturesSection';
 import EditionsSection from '../components/EditionsSection';
 import HowItWorksSection from '../components/HowItWorksSection';
 import TargetAudienceSection from '../components/TargetAudienceSection';
+import ClientShowcase from '../components/ClientShowcase';
 import TestimonialsSection from '../components/TestimonialsSection';
 import FAQSection from '../components/FAQSection';
 import FinalCTASection from '../components/FinalCTASection';
@@ -52,6 +53,7 @@ const Index = () => {
       </div>
       <HowItWorksSection />
       <TargetAudienceSection />
+      <ClientShowcase />
       <TestimonialsSection />
       <FAQSection />
       <div id="support">
