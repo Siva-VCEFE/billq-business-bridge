@@ -30,14 +30,14 @@ const Header = () => {
                 className="hidden sm:flex items-center gap-2 border-[#0bc073] text-[#0bc073] hover:bg-[#0bc073] hover:text-white"
               >
                 <Phone className="h-4 w-4" />
-                Call Now
+                <span>Call Now</span>
               </Button>
               <Button 
                 onClick={() => setShowContact(true)}
                 className="bg-[#0bc073] hover:bg-[#089a5f] flex items-center gap-2"
               >
                 <Mail className="h-4 w-4" />
-                Get Demo
+                <span>Get Demo</span>
               </Button>
             </div>
           </div>

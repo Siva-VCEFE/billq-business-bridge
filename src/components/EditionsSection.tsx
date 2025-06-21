@@ -1,63 +1,71 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check, Globe, WifiOff, AlertCircle, CheckCircle, X, Zap, Settings, Shield, Users } from 'lucide-react';
+import { Check, Globe, WifiOff, AlertCircle, CheckCircle, X, Zap, Settings, Shield, Users, Infinity } from 'lucide-react';
 
 const EditionsSection = () => {
   const editions = [
     {
       name: "Starter Pack",
-      subtitle: "Perfect for Small Businesses",
+      subtitle: "Essential Invoicing Solution",
       price: "₹15,000",
       duration: "One-time Setup",
-      renewal: "Optional offline updates",
+      renewal: "₹5,000/year (Online) or Optional (Offline)",
       popular: false,
-      description: "Essential order management with basic customization",
+      description: "Perfect for small businesses focused on professional invoicing and basic reporting",
       features: [
-        "Multi-channel Order Management",
-        "Basic Kanban Board View",
-        "One-Click Invoice Generation",
-        "Customer Management (up to 500)",
+        "Smart & Instant Billing",
+        "GST-Compliant Invoice Generation",
+        "Customer Management (Unlimited)",
         "Basic Reports & Analytics",
-        "Email Support",
+        "Multi-Printer Compatibility",
+        "Barcode Sticker Printing",
+        "Email & WhatsApp Invoice Delivery",
         "2 User Accounts",
         "Mobile App Access",
-        "Basic Workflow Customization"
+        "Online/Offline Mode"
       ],
       notIncluded: [
-        "Advanced Custom Workflows",
-        "API Integrations",
-        "Priority Support",
-        "On-site Training"
+        "Order Management with Kanban View",
+        "Lead to Invoice Conversion",
+        "Multi-Channel Sales Handling",
+        "POS System",
+        "Inventory Management",
+        "Payroll Management",
+        "Advanced Analytics"
       ]
     },
     {
       name: "Business Pro",
-      subtitle: "For Growing Businesses",
+      subtitle: "Complete Business Management",
       price: "₹35,000",
       duration: "One-time Setup",
       renewal: "₹8,000/year (Online) or Optional (Offline)",
       popular: true,
-      description: "Advanced order management with extensive customization",
+      description: "Comprehensive solution with unlimited features for growing businesses",
       features: [
         "Everything in Starter Pack",
-        "Advanced Kanban Workflows",
-        "Custom Order Status Tracking",
-        "Unlimited Customers",
-        "Advanced Analytics & Reports",
-        "API Integration Support",
-        "WhatsApp & Phone Support",
-        "5 User Accounts",
-        "Advanced Workflow Designer",
-        "Multi-location Support",
-        "Inventory Management",
-        "Payment Gateway Integration"
+        "Lead to Invoice in One Click",
+        "Multi-Channel Sales Handling",
+        "Wholesale-Specific Invoicing Module",
+        "Smart POS for Retail Businesses",
+        "Customer Balance & Outstanding Tracker",
+        "Vendor & Supplier Payment Management",
+        "Expense & Payment Tracking",
+        "Inventory Monitoring in Real-Time",
+        "Role-Based User Access & Permissions",
+        "Comprehensive Reports & Business Insights",
+        "Multi-Location Support",
+        "Unlimited Users & Data",
+        "Priority Support"
       ],
       notIncluded: [
-        "Dedicated Account Manager",
-        "On-site Implementation",
-        "Custom Development"
-      ]
+        "Sales Order Management",
+        "Kanban Board View",
+        "Automated Payroll & Payslip Management"
+      ],
+      highlight: "🚀 UNLIMITED Everything - Users, Invoices, Customers, Storage!"
     },
     {
       name: "Enterprise Plus",
@@ -66,22 +74,25 @@ const EditionsSection = () => {
       duration: "Based on Requirements",
       renewal: "Negotiable Terms",
       popular: false,
-      description: "Completely tailored system designed for your specific workflow",
+      description: "Complete business automation with custom workflows and unlimited scalability",
       features: [
         "Everything in Business Pro",
+        "Order Management with Kanban View",
+        "Sales Order Processing",
+        "Automated Payroll & Payslip Management",
         "100% Custom Workflow Design",
         "Dedicated Account Manager",
         "On-site Implementation & Training",
         "Custom Module Development",
-        "Unlimited User Accounts",
         "24/7 Priority Support",
         "Custom API Development",
         "Advanced Security Features",
-        "Custom Reporting Dashboard",
         "Third-party System Integration",
-        "Ongoing Development Support"
+        "Ongoing Development Support",
+        "White-label Solutions"
       ],
-      notIncluded: []
+      notIncluded: [],
+      highlight: "🎯 Completely Tailored for Your Business Workflow"
     }
   ];
 
@@ -93,11 +104,21 @@ const EditionsSection = () => {
             Choose Your Perfect Solution
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            From ready-to-use solutions to completely custom workflows - we have the right package for your business needs. Every system is designed to grow with your business.
+            From essential invoicing to complete business automation - we have the right package for your business needs. Every system is designed to grow with your business with unlimited scalability.
           </p>
-          <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
-            <span className="w-2 h-2 bg-[#0bc073] rounded-full mr-2"></span>
-            All plans include free setup and initial customization
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+              <Infinity className="w-4 h-4 mr-2" />
+              Unlimited Users & Data
+            </div>
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              <Globe className="w-4 h-4 mr-2" />
+              Online & Offline Mode
+            </div>
+            <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
+              <span className="w-2 h-2 bg-[#0bc073] rounded-full mr-2"></span>
+              Free Setup & Customization
+            </div>
           </div>
         </div>
 
@@ -123,6 +144,11 @@ const EditionsSection = () => {
                   <div className="text-xs text-gray-500 mt-1">{edition.renewal}</div>
                 </div>
                 <p className="text-sm text-gray-600">{edition.description}</p>
+                {edition.highlight && (
+                  <div className="bg-gradient-to-r from-[#0bc073] to-emerald-600 text-white px-3 py-2 rounded-lg text-xs font-medium mt-3">
+                    {edition.highlight}
+                  </div>
+                )}
               </CardHeader>
 
               <CardContent className="space-y-6">

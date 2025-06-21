@@ -7,40 +7,44 @@ import {
   Users, 
   Settings, 
   User, 
-  Coffee 
+  Coffee,
+  Factory,
+  Store,
+  Package,
+  Smartphone
 } from 'lucide-react';
 
 const TargetAudienceSection = () => {
   const audiences = [
     {
       icon: <ShoppingBag className="h-12 w-12 text-blue-600" />,
-      title: "Retail Shops",
-      description: "Manage inventory, sales, and customer relationships"
+      title: "Retail Shops & Boutiques",
+      description: "Manage inventory, sales, POS operations and customer relationships"
     },
     {
       icon: <Truck className="h-12 w-12 text-green-600" />,
-      title: "Distributors",
-      description: "Track orders, deliveries, and supplier relationships"
+      title: "Distributors & Wholesalers",
+      description: "Track bulk orders, deliveries, and supplier relationships with B2B invoicing"
     },
     {
-      icon: <Users className="h-12 w-12 text-purple-600" />,
-      title: "Field Sales Teams",
-      description: "Capture orders on-the-go with offline capability"
-    },
-    {
-      icon: <Settings className="h-12 w-12 text-orange-600" />,
+      icon: <Factory className="h-12 w-12 text-orange-600" />,
       title: "Small Manufacturers",
-      description: "Manage production, inventory, and order fulfillment"
+      description: "Manage production, inventory, order fulfillment and vendor payments"
+    },
+    {
+      icon: <Store className="h-12 w-12 text-purple-600" />,
+      title: "Trading Businesses",
+      description: "Multi-channel sales management with inventory and financial tracking"
     },
     {
       icon: <User className="h-12 w-12 text-indigo-600" />,
       title: "Freelancers & Service Providers",
-      description: "Professional invoicing and client management"
+      description: "Professional invoicing, expense tracking and client management"
     },
     {
-      icon: <Coffee className="h-12 w-12 text-red-600" />,
-      title: "Cafes, Clinics & Agencies",
-      description: "Streamline operations and customer service"
+      icon: <Package className="h-12 w-12 text-red-600" />,
+      title: "E-commerce & Online Sellers",
+      description: "Unified order management across multiple online platforms and marketplaces"
     }
   ];
 
@@ -52,7 +56,7 @@ const TargetAudienceSection = () => {
             Who Can Use BillQ?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Designed for businesses of all types and sizes
+            Designed for businesses of all types and sizes - from small retailers to growing enterprises
           </p>
         </div>
         
