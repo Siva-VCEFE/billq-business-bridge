@@ -28,7 +28,8 @@ import {
   Printer,
   Shield,
   Clock,
-  Infinity
+  Infinity,
+  Layers
 } from 'lucide-react';
 
 const FeaturesSection = () => {
@@ -91,6 +92,15 @@ const FeaturesSection = () => {
     },
     {
       id: 7,
+      icon: <Layers className="h-12 w-12 text-[#0bc073]" />,
+      title: "Multi Price Level Setup Option",
+      shortDesc: "Flexible pricing structure for different customer segments",
+      description: "Create multiple pricing levels for your products to cater to different customer segments. Set wholesale prices, retail prices, VIP customer rates, and seasonal pricing all in one system. Perfect for businesses serving diverse customer bases.",
+      benefits: ["Multiple price levels", "Customer-specific pricing", "Bulk discount tiers", "Seasonal pricing", "Automatic price application"],
+      highlight: "Maximize profits with intelligent pricing strategies"
+    },
+    {
+      id: 8,
       icon: <QrCode className="h-12 w-12 text-[#0bc073]" />,
       title: "Barcode Sticker Printing",
       shortDesc: "Professional barcode generation and printing system",
@@ -99,7 +109,7 @@ const FeaturesSection = () => {
       highlight: "Automate inventory tracking with professional barcodes"
     },
     {
-      id: 8,
+      id: 9,
       icon: <DollarSign className="h-12 w-12 text-[#0bc073]" />,
       title: "Customer Balance & Outstanding Tracker",
       shortDesc: "Complete customer financial relationship management",
@@ -108,7 +118,7 @@ const FeaturesSection = () => {
       highlight: "Reduce bad debt by 80% with smart payment tracking"
     },
     {
-      id: 9,
+      id: 10,
       icon: <Truck className="h-12 w-12 text-[#0bc073]" />,
       title: "Vendor & Supplier Payment Management",
       shortDesc: "Streamlined vendor relationship and payment handling",
@@ -117,7 +127,7 @@ const FeaturesSection = () => {
       highlight: "Optimize supplier relationships and reduce procurement costs"
     },
     {
-      id: 10,
+      id: 11,
       icon: <Calculator className="h-12 w-12 text-[#0bc073]" />,
       title: "Expense & Payment Tracking",
       shortDesc: "Complete financial control with expense management",
@@ -126,7 +136,7 @@ const FeaturesSection = () => {
       highlight: "Gain complete financial visibility and control"
     },
     {
-      id: 11,
+      id: 12,
       icon: <Eye className="h-12 w-12 text-[#0bc073]" />,
       title: "Inventory Monitoring in Real-Time",
       shortDesc: "Live inventory tracking with intelligent alerts",
@@ -135,16 +145,16 @@ const FeaturesSection = () => {
       highlight: "Reduce inventory costs by 25% with smart monitoring"
     },
     {
-      id: 12,
+      id: 13,
       icon: <Printer className="h-12 w-12 text-[#0bc073]" />,
-      title: "Multi-Printer Compatibility",
+      title: "Multi-Printer Compatibility (Thermal & Laser)",
       shortDesc: "Universal printing support for all business needs",
       description: "Support for thermal printers, laser printers, and dot matrix printers. Print invoices, receipts, labels, and reports on any printer with customizable formats and automatic printer selection.",
       benefits: ["Thermal printer support", "Laser printer compatibility", "Custom print formats", "Multiple paper sizes", "Automatic printer selection"],
       highlight: "Print on any printer with perfect formatting every time"
     },
     {
-      id: 13,
+      id: 14,
       icon: <Shield className="h-12 w-12 text-[#0bc073]" />,
       title: "Role-Based User Access & Permissions",
       shortDesc: "Enterprise-grade security with granular access control",
@@ -153,7 +163,7 @@ const FeaturesSection = () => {
       highlight: "Enterprise-level security for businesses of all sizes"
     },
     {
-      id: 14,
+      id: 15,
       icon: <BarChart3 className="h-12 w-12 text-[#0bc073]" />,
       title: "Comprehensive Reports & Business Insights",
       shortDesc: "Advanced analytics for data-driven business growth",
@@ -162,7 +172,7 @@ const FeaturesSection = () => {
       highlight: "Increase profitability by 35% with data-driven decisions"
     },
     {
-      id: 15,
+      id: 16,
       icon: <Users className="h-12 w-12 text-[#0bc073]" />,
       title: "Automated Payroll & Payslip Management",
       shortDesc: "Complete HR solution with automated payroll processing",
@@ -171,16 +181,16 @@ const FeaturesSection = () => {
       highlight: "Save 20+ hours monthly on payroll processing"
     },
     {
-      id: 16,
+      id: 17,
       icon: <Wifi className="h-12 w-12 text-[#0bc073]" />,
       title: "Use Online or Offline – Your Choice",
-      shortDesc: "Flexibility to work anywhere, anytime",
-      description: "Complete freedom to work online or offline based on your needs. Seamless synchronization when online, full functionality when offline. Never let connectivity issues stop your business operations.",
-      benefits: ["Offline functionality", "Online synchronization", "Cloud backup", "Data security", "Flexible working"],
-      highlight: "100% business continuity regardless of internet connectivity"
+      shortDesc: "Flexibility to work either online or offline based on your needs",
+      description: "Complete freedom to choose between online or offline mode based on your business requirements. Online version offers cloud synchronization and remote access, while offline version provides complete data control and independence from internet connectivity.",
+      benefits: ["Online or offline modes", "Cloud synchronization (online)", "Local data storage (offline)", "Data security", "Flexible deployment"],
+      highlight: "Choose the deployment that suits your business needs"
     },
     {
-      id: 17,
+      id: 18,
       icon: <Infinity className="h-12 w-12 text-[#0bc073]" />,
       title: "Unlimited Everything – No Restrictions",
       shortDesc: "Scale without limits or hidden charges",

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -12,7 +13,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/1c0997be-885b-4b84-9f10-02bd9aa45f22.png" 
               alt="BillQ" 
-              className="h-8 w-auto mb-4 brightness-0 invert"
+              className="h-10 w-auto mb-4 brightness-0 invert filter drop-shadow-sm"
             />
             <p className="text-gray-300 mb-4">
               Smart Order Management System designed to streamline your business operations with unlimited scalability.

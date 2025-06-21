@@ -21,7 +21,7 @@ const SupportSection = () => {
       description: "Quick help via WhatsApp messaging",
       contact: "+91 82207 60340",
       action: () => window.open('https://wa.me/918220760340?text=Hi, I need help with BillQ'),
-      availability: "24/7 Available"
+      availability: "Mon-Sat: 9 AM - 7 PM"
     },
     {
       icon: <Mail className="h-8 w-8 text-[#0bc073]" />,
@@ -51,8 +51,8 @@ const SupportSection = () => {
     },
     {
       icon: <Globe className="h-8 w-8 text-[#0bc073]" />,
-      value: "15+",
-      label: "States Covered"
+      value: "Pan India",
+      label: "Service Coverage"
     }
   ];
 
@@ -61,10 +61,10 @@ const SupportSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            24/7 Support When You Need It
+            Professional Support When You Need It
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our dedicated support team is here to help you succeed. Get assistance through your preferred channel with fast, reliable, and expert guidance.
+            Our dedicated support team is here to help you succeed. Get assistance through your preferred channel with fast, reliable, and expert guidance during business hours.
           </p>
         </div>
 
@@ -128,11 +128,11 @@ const SupportSection = () => {
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Immediate Help?</h3>
             <p className="text-gray-600 mb-6">
-              Our support team is standing by to help you with setup, training, troubleshooting, and any questions about BillQ.
+              Our support team is standing by to help you with setup, training, troubleshooting, and any questions about BillQ during business hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => window.open('https://wa.me/918220760340?text=Hi, I need immediate help with BillQ')}
+                onClick={() => window.open('https://wa.me/918220760340?text=Hi, I need help with BillQ')}
                 className="bg-green-600 hover:bg-green-700 flex items-center gap-2"
               >
                 <MessageCircle className="h-4 w-4" />

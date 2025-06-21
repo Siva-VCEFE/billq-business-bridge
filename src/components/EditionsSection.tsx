@@ -9,22 +9,20 @@ const EditionsSection = () => {
     {
       name: "Starter Pack",
       subtitle: "Essential Invoicing Solution",
-      price: "₹15,000",
-      duration: "One-time Setup",
-      renewal: "₹5,000/year (Online) or Optional (Offline)",
+      price: "₹6,000",
+      duration: "One-time (Including Setup)",
+      renewal: "No renewal required",
       popular: false,
       description: "Perfect for small businesses focused on professional invoicing and basic reporting",
       features: [
         "Smart & Instant Billing",
         "GST-Compliant Invoice Generation",
         "Customer Management (Unlimited)",
-        "Basic Reports & Analytics",
+        "Basic Invoice Reports",
         "Multi-Printer Compatibility",
-        "Barcode Sticker Printing",
         "Email & WhatsApp Invoice Delivery",
-        "2 User Accounts",
-        "Mobile App Access",
-        "Online/Offline Mode"
+        "Single User Account",
+        "Offline Mode Only"
       ],
       notIncluded: [
         "Order Management with Kanban View",
@@ -33,44 +31,50 @@ const EditionsSection = () => {
         "POS System",
         "Inventory Management",
         "Payroll Management",
-        "Advanced Analytics"
+        "Advanced Analytics",
+        "Mobile App Access",
+        "Online Mode"
       ]
     },
     {
       name: "Business Pro",
       subtitle: "Complete Business Management",
-      price: "₹35,000",
-      duration: "One-time Setup",
-      renewal: "₹8,000/year (Online) or Optional (Offline)",
+      price: "₹12,500 (Offline) / ₹15,000 (Online)",
+      duration: "One-time Setup Cost",
+      renewal: "20% (Offline - Optional) / 30% (Online - Mandatory)",
       popular: true,
       description: "Comprehensive solution with unlimited features for growing businesses",
       features: [
         "Everything in Starter Pack",
         "Lead to Invoice in One Click",
         "Multi-Channel Sales Handling",
+        "Multi Price Level Setup Option",
         "Wholesale-Specific Invoicing Module",
         "Smart POS for Retail Businesses",
         "Customer Balance & Outstanding Tracker",
         "Vendor & Supplier Payment Management",
         "Expense & Payment Tracking",
         "Inventory Monitoring in Real-Time",
+        "Barcode Sticker Printing",
         "Role-Based User Access & Permissions",
         "Comprehensive Reports & Business Insights",
         "Multi-Location Support",
         "Unlimited Users & Data",
+        "Online OR Offline Mode",
         "Priority Support"
       ],
       notIncluded: [
         "Sales Order Management",
         "Kanban Board View",
-        "Automated Payroll & Payslip Management"
+        "Automated Payroll & Payslip Management",
+        "Mobile App Access"
       ],
       highlight: "🚀 UNLIMITED Everything - Users, Invoices, Customers, Storage!"
     },
     {
-      name: "Enterprise Plus",
+      name: "Enterprise Edition",
       subtitle: "Fully Customized Solution",
-      price: "Custom Pricing",
+      price: "Starting ₹25,000",
       duration: "Based on Requirements",
       renewal: "Negotiable Terms",
       popular: false,
@@ -80,6 +84,7 @@ const EditionsSection = () => {
         "Order Management with Kanban View",
         "Sales Order Processing",
         "Automated Payroll & Payslip Management",
+        "Mobile App Access (Reporting Only)",
         "100% Custom Workflow Design",
         "Dedicated Account Manager",
         "On-site Implementation & Training",
@@ -92,7 +97,7 @@ const EditionsSection = () => {
         "White-label Solutions"
       ],
       notIncluded: [],
-      highlight: "🎯 Completely Tailored for Your Business Workflow"
+      highlight: "🎯 Completely Tailored for Your Business Workflow + Mobile App"
     }
   ];
 
@@ -113,7 +118,7 @@ const EditionsSection = () => {
             </div>
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
               <Globe className="w-4 h-4 mr-2" />
-              Online & Offline Mode
+              Online OR Offline Mode
             </div>
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
               <span className="w-2 h-2 bg-[#0bc073] rounded-full mr-2"></span>
@@ -139,9 +144,9 @@ const EditionsSection = () => {
                 <CardTitle className="text-2xl font-bold text-gray-900">{edition.name}</CardTitle>
                 <p className="text-gray-600 mb-4">{edition.subtitle}</p>
                 <div className="mb-4">
-                  <div className="text-4xl font-bold text-[#0bc073] mb-2">{edition.price}</div>
+                  <div className="text-3xl font-bold text-[#0bc073] mb-2">{edition.price}</div>
                   <div className="text-sm text-gray-600">{edition.duration}</div>
-                  <div className="text-xs text-gray-500 mt-1">{edition.renewal}</div>
+                  <div className="text-xs text-gray-500 mt-1">Annual Renewal: {edition.renewal}</div>
                 </div>
                 <p className="text-sm text-gray-600">{edition.description}</p>
                 {edition.highlight && (
@@ -200,7 +205,7 @@ Looking forward to your response.`);
                     window.open(`mailto:support@billq.co.in?subject=${subject}&body=${body}`);
                   }}
                 >
-                  {edition.price === "Custom Pricing" ? "Get Custom Quote" : "Get This Package"}
+                  {edition.price.includes("Starting") ? "Get Custom Quote" : "Get This Package"}
                 </Button>
               </CardContent>
             </Card>
@@ -244,6 +249,30 @@ Looking forward to your response.`);
               </div>
               <h4 className="font-semibold mb-2">Ongoing Support</h4>
               <p className="text-sm text-gray-600">Dedicated support team to help you succeed</p>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <div className="bg-white rounded-xl p-6 border border-green-200">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Important Notes:</h4>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-[#0bc073] mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Annual renewal is mandatory for online editions to maintain cloud services</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-[#0bc073] mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Offline edition renewal is optional but recommended for updates and support</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-[#0bc073] mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Additional customization beyond standard features will be charged extra</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-[#0bc073] mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Mobile app in Enterprise edition is for reporting and monitoring only, not for full transactions</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
