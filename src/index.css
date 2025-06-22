@@ -126,6 +126,65 @@
   .grid-mobile {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
   }
+  
+  /* Mobile-specific text sizing */
+  .text-mobile-sm {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .text-mobile-base {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-mobile-lg {
+    @apply text-base sm:text-lg;
+  }
+  
+  .text-mobile-xl {
+    @apply text-lg sm:text-xl;
+  }
+  
+  .text-mobile-2xl {
+    @apply text-xl sm:text-2xl;
+  }
+  
+  .text-mobile-3xl {
+    @apply text-2xl sm:text-3xl;
+  }
+  
+  /* Mobile padding and margin utilities */
+  .p-mobile {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+  
+  .px-mobile {
+    @apply px-4 sm:px-6 md:px-8;
+  }
+  
+  .py-mobile {
+    @apply py-4 sm:py-6 md:py-8;
+  }
+  
+  .m-mobile {
+    @apply m-4 sm:m-6 md:m-8;
+  }
+  
+  .mx-mobile {
+    @apply mx-4 sm:mx-6 md:mx-8;
+  }
+  
+  .my-mobile {
+    @apply my-4 sm:my-6 md:my-8;
+  }
+  
+  /* Mobile-friendly spacing */
+  .space-y-mobile > * + * {
+    @apply mt-4 sm:mt-6 md:mt-8;
+  }
+  
+  .space-x-mobile > * + * {
+    @apply ml-4 sm:ml-6 md:ml-8;
+  }
 }
 
 /* Additional mobile optimizations */
@@ -140,6 +199,37 @@
   
   .mobile-text {
     @apply text-base leading-relaxed;
+  }
+  
+  /* Ensure buttons are touch-friendly */
+  .btn {
+    @apply min-h-[44px];
+  }
+  
+  /* Make cards more compact on mobile */
+  .card {
+    @apply rounded-lg;
+  }
+  
+  /* Adjust hero section for mobile */
+  .hero-mobile {
+    @apply py-12 px-4;
+  }
+  
+  /* Mobile navigation adjustments */
+  .nav-mobile {
+    @apply flex-col space-y-2;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-grid {
+    @apply grid-cols-2;
+  }
+  
+  .tablet-text {
+    @apply text-base;
   }
 }
 
@@ -174,5 +264,12 @@ html {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 640px) {
+  button, a, input, select, textarea {
+    @apply min-h-[44px] min-w-[44px];
   }
 }
