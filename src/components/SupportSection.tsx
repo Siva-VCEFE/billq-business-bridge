@@ -13,15 +13,15 @@ const SupportSection = () => {
       description: "Speak directly with our support team",
       contact: "+91 82204 90340",
       action: () => window.open('tel:+918220490340'),
-      availability: "Mon-Sat: 9 AM - 7 PM"
+      availability: "Mon-Sat: 9:30 AM - 6:30 PM"
     },
     {
       icon: <MessageCircle className="h-8 w-8 text-[#0bc073]" />,
       title: "WhatsApp Support",
       description: "Quick help via WhatsApp messaging",
-      contact: "+91 82207 60340",
+      contact: "+91 82207 60340", 
       action: () => window.open('https://wa.me/918220760340?text=Hi, I need help with BillQ'),
-      availability: "Mon-Sat: 9 AM - 7 PM"
+      availability: "Mon-Sat: 9:30 AM - 6:30 PM"
     },
     {
       icon: <Mail className="h-8 w-8 text-[#0bc073]" />,
@@ -41,18 +41,18 @@ const SupportSection = () => {
     },
     {
       icon: <Users className="h-8 w-8 text-[#0bc073]" />,
-      value: "500+",
+      value: "50+",
       label: "Happy Customers Served"
     },
     {
       icon: <Award className="h-8 w-8 text-[#0bc073]" />,
-      value: "98%",
+      value: "98%", 
       label: "Customer Satisfaction"
     },
     {
       icon: <Headphones className="h-8 w-8 text-[#0bc073]" />,
       value: "Mon-Sat",
-      label: "9 AM - 7 PM Support"
+      label: "9:30 AM - 6:30 PM Support"
     }
   ];
 
@@ -115,9 +115,9 @@ const SupportSection = () => {
         {/* Feedback Section */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">We Value Your Feedback</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Customer Testimonials & Feedback</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Help us improve BillQ by sharing your experience. Your feedback drives our continuous improvement.
+              See what our customers are saying about BillQ and share your own experience.
             </p>
           </div>
           <FeedbackSection />
@@ -128,7 +128,7 @@ const SupportSection = () => {
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Immediate Help?</h3>
             <p className="text-gray-600 mb-6">
-              Our support team is standing by to help you with setup, training, troubleshooting, and any questions about BillQ during business hours.
+              Our support team is standing by to help you with setup, training, troubleshooting, and any questions about BillQ during business hours (Mon-Sat: 9:30 AM - 6:30 PM).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 

@@ -18,7 +18,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/1c0997be-885b-4b84-9f10-02bd9aa45f22.png" 
                 alt="BillQ" 
-                className="h-12 w-auto sm:h-14 brightness-0 invert filter drop-shadow-lg"
+                className="h-16 w-auto sm:h-16 md:h-14 lg:h-16 brightness-0 invert filter drop-shadow-lg hover:scale-105 transition-transform"
               />
             </a>
             <p className="text-gray-300 mb-4">
