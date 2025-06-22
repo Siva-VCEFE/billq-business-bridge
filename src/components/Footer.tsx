@@ -18,7 +18,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/1c0997be-885b-4b84-9f10-02bd9aa45f22.png" 
                 alt="BillQ" 
-                className="h-12 sm:h-14 md:h-16 w-auto brightness-0 invert filter drop-shadow-lg hover:scale-105 transition-transform"
+                className="h-12 sm:h-14 md:h-16 w-auto brightness-200 invert filter drop-shadow-lg hover:scale-105 transition-transform"
               />
             </a>
             <p className="text-gray-300 mb-4 text-sm sm:text-base">
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="mb-6 sm:mb-0">
             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
             <ul className="space-y-2">
               <li><a href="#features" className="text-gray-300 hover:text-[#0bc073] transition-colors text-sm sm:text-base">Features</a></li>
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           {/* Solutions */}
-          <div>
+          <div className="mb-6 sm:mb-0">
             <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Solutions</h4>
             <ul className="space-y-2">
               <li><span className="text-gray-300 text-sm sm:text-base">Smart Billing</span></li>
@@ -113,7 +113,7 @@ const Footer = () => {
                 © {new Date().getFullYear()} BillQ. All rights reserved. Made with ❤️ for Indian businesses.
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                This BillQ product is powered by{' '}
+                Powered by{' '}
                 <a 
                   href="https://www.vcefe.com" 
                   target="_blank" 

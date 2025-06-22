@@ -9,7 +9,7 @@ const HowItWorksSection = () => {
     {
       icon: <Download className="h-8 w-8 text-[#0bc073]" />,
       title: "Quick Setup",
-      description: "Download and install BillQ. Complete setup within 1 hour with our guided onboarding process.",
+      description: "Download and install BillQ. Complete setup within an hour with our guided onboarding process.",
       step: "01"
     },
     {
