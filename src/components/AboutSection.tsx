@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Award, Users, Globe, Zap } from 'lucide-react';
+import { Award, Users, Globe, Zap, Target, TrendingUp } from 'lucide-react';
 
 const AboutSection = () => {
   const stats = [
