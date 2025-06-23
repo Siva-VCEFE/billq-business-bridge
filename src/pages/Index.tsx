@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
@@ -14,6 +13,7 @@ import WhatsAppWidget from '../components/support/WhatsAppWidget';
 import AboutSection from '../components/AboutSection';
 import SupportSection from '../components/SupportSection';
 import Footer from '../components/Footer';
+import AffiliateSection from '../components/AffiliateSection';
 
 const Index = () => {
   // Google Analytics initialization
@@ -53,6 +53,7 @@ const Index = () => {
       <HowItWorksSection />
       <TargetAudienceSection />
       <TestimonialsSection />
+      <AffiliateSection />
       <FAQSection />
       <div id="support">
         <SupportSection />

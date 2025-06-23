@@ -6,24 +6,24 @@ import { Award, Users, Globe, Zap } from 'lucide-react';
 const AboutSection = () => {
   const stats = [
     {
-      icon: <Users className="h-6 w-6 sm:h-8 sm:w-8 text-blue-600" />,
       number: "50+",
-      label: "Businesses Empowered"
+      label: "Happy Customers",
+      icon: <Users className="h-8 w-8 text-[#0bc073]" />
     },
     {
-      icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
-      number: "15+",
-      label: "Industries Served"
+      number: "5+",
+      label: "Years of Excellence",
+      icon: <Award className="h-8 w-8 text-[#0bc073]" />
     },
     {
-      icon: <Award className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600" />,
-      number: "2+",
-      label: "Years of Excellence"
+      number: "10+",
+      label: "Industries Served",
+      icon: <Target className="h-8 w-8 text-[#0bc073]" />
     },
     {
-      icon: <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-orange-600" />,
-      number: "99.9%",
-      label: "Uptime Guarantee"
+      number: "99%",
+      label: "Customer Satisfaction",
+      icon: <TrendingUp className="h-8 w-8 text-[#0bc073]" />
     }
   ];
 

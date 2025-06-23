@@ -6,8 +6,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -71,7 +69,8 @@ const TestimonialsSection = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 4000,
+                delay: 3000,
+                stopOnInteraction: false,
               }),
             ]}
             className="w-full"
@@ -80,19 +79,19 @@ const TestimonialsSection = () => {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="h-full hover:shadow-lg transition-shadow duration-300 border-green-100">
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 sm:p-6">
                       <div className="flex justify-center mb-4">
-                        <Quote className="h-8 w-8 text-[#0bc073]" />
+                        <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-[#0bc073]" />
                       </div>
-                      <p className="text-gray-700 mb-6 italic text-center text-sm sm:text-base">
+                      <p className="text-gray-700 mb-4 sm:mb-6 italic text-center text-sm sm:text-base">
                         "{testimonial.quote}"
                       </p>
                       <div className="text-center">
-                        <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                        <div className="text-sm text-gray-600">{testimonial.business}</div>
+                        <div className="font-semibold text-gray-900 text-sm sm:text-base">{testimonial.name}</div>
+                        <div className="text-xs sm:text-sm text-gray-600">{testimonial.business}</div>
                         <div className="flex justify-center mt-2">
                           {[...Array(testimonial.rating)].map((_, i) => (
-                            <span key={i} className="text-yellow-400 text-lg">★</span>
+                            <span key={i} className="text-yellow-400 text-base sm:text-lg">★</span>
                           ))}
                         </div>
                       </div>
@@ -101,8 +100,6 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
           </Carousel>
         </div>
       </div>
