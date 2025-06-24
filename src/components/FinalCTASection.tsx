@@ -53,85 +53,88 @@ Preferred: ${formData.preferredUsage}`);
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#0bc073] to-emerald-700 text-white">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#0bc073] to-emerald-700 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Start Your Digital Business Transformation Today
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl opacity-90 max-w-3xl mx-auto mb-6 sm:mb-8">
             Join 50+ Indian businesses using BillQ for smart order management, multi-channel processing, and business growth
           </p>
           
-          <div className="flex justify-center items-center gap-8 mb-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-6 sm:mb-8">
             <div className="flex items-center gap-2">
-              <Users className="h-5 w-5" />
-              <span className="text-sm">50+ Growing Businesses</span>
+              <Users className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="text-sm sm:text-base">50+ Growing Businesses</span>
             </div>
             <div className="flex items-center gap-2">
-              <Star className="h-5 w-5 text-yellow-400" />
-              <span className="text-sm">4.9/5 Rating</span>
+              <Star className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
+              <span className="text-sm sm:text-base">4.9/5 Rating</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-300" />
-              <span className="text-sm">99.9% Uptime</span>
+              <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-300" />
+              <span className="text-sm sm:text-base">99.9% Uptime</span>
             </div>
           </div>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="text-center lg:text-left">
-            <h3 className="text-2xl font-bold mb-6">Ready to Streamline Your Business?</h3>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-300" />
-                <span>Free consultation and setup support</span>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Ready to Streamline Your Business?</h3>
+            <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <div className="flex items-center gap-3 justify-center lg:justify-start">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-300 flex-shrink-0" />
+                <span className="text-sm sm:text-base">Free consultation and setup support</span>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-300" />
-                <span>Customizable to your workflow</span>
+              <div className="flex items-center gap-3 justify-center lg:justify-start">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-300 flex-shrink-0" />
+                <span className="text-sm sm:text-base">Customizable to your workflow</span>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-300" />
-                <span>Multi-channel order management</span>
+              <div className="flex items-center gap-3 justify-center lg:justify-start">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-300 flex-shrink-0" />
+                <span className="text-sm sm:text-base">Multi-channel order management</span>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-green-300" />
-                <span>One-click lead to invoice conversion</span>
+              <div className="flex items-center gap-3 justify-center lg:justify-start">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-300 flex-shrink-0" />
+                <span className="text-sm sm:text-base">One-click lead to invoice conversion</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-white text-[#0bc073] hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105">
+              <Button 
+                size="lg" 
+                className="bg-white text-[#0bc073] hover:bg-gray-100 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 text-sm sm:text-base"
+              >
                 View All Pricing Plans
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-[#0bc073] px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-[#0bc073] px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 bg-transparent text-sm sm:text-base"
                 onClick={() => window.open('tel:+918220490340')}
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Call: +91 82204 90340
               </Button>
             </div>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-2 text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2 text-center">
               Get Free Demo & Consultation
             </h3>
-            <p className="text-center mb-6 opacity-90">
+            <p className="text-center mb-6 opacity-90 text-sm sm:text-base">
               Fill this form and our team will contact you within 2 hours
             </p>
             
             {isSubmitted ? (
-              <div className="text-center py-12">
-                <CheckCircle className="h-16 w-16 text-green-300 mx-auto mb-4" />
-                <h4 className="text-xl font-bold mb-2">Thank You!</h4>
-                <p className="opacity-90 mb-4">Your demo request has been sent successfully.</p>
-                <p className="text-sm opacity-75">Our team will contact you within 2 hours via email and WhatsApp</p>
+              <div className="text-center py-8 sm:py-12">
+                <CheckCircle className="h-12 w-12 sm:h-16 sm:w-16 text-green-300 mx-auto mb-4" />
+                <h4 className="text-lg sm:text-xl font-bold mb-2">Thank You!</h4>
+                <p className="opacity-90 mb-4 text-sm sm:text-base">Your demo request has been sent successfully.</p>
+                <p className="text-xs sm:text-sm opacity-75">Our team will contact you within 2 hours via email and WhatsApp</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -140,19 +143,19 @@ Preferred: ${formData.preferredUsage}`);
                     placeholder="Your Full Name *" 
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70 text-sm sm:text-base h-10 sm:h-12"
                     required
                   />
                   <Input 
                     placeholder="Mobile Number *" 
                     value={formData.mobile}
                     onChange={(e) => handleInputChange('mobile', e.target.value)}
-                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/70 text-sm sm:text-base h-10 sm:h-12"
                     required
                   />
                 </div>
                 <Select onValueChange={(value) => handleInputChange('businessType', value)}>
-                  <SelectTrigger className="bg-white/20 border-white/30 text-white">
+                  <SelectTrigger className="bg-white/20 border-white/30 text-white h-10 sm:h-12">
                     <SelectValue placeholder="Select Your Business Type *" />
                   </SelectTrigger>
                   <SelectContent>
@@ -167,7 +170,7 @@ Preferred: ${formData.preferredUsage}`);
                   </SelectContent>
                 </Select>
                 <Select onValueChange={(value) => handleInputChange('preferredUsage', value)}>
-                  <SelectTrigger className="bg-white/20 border-white/30 text-white">
+                  <SelectTrigger className="bg-white/20 border-white/30 text-white h-10 sm:h-12">
                     <SelectValue placeholder="Preferred Software Mode *" />
                   </SelectTrigger>
                   <SelectContent>
@@ -178,7 +181,7 @@ Preferred: ${formData.preferredUsage}`);
                 </Select>
                 <Button 
                   type="submit"
-                  className="w-full bg-white text-[#0bc073] hover:bg-gray-100 py-3 font-semibold transition-all duration-200 hover:scale-105"
+                  className="w-full bg-white text-[#0bc073] hover:bg-gray-100 py-3 font-semibold transition-all duration-200 hover:scale-105 text-sm sm:text-base h-10 sm:h-12"
                   disabled={!formData.name || !formData.mobile || !formData.businessType || !formData.preferredUsage}
                 >
                   Get Free Demo & Pricing
